@@ -1,0 +1,49 @@
+@MemberApi_HostAddress = https://localhost:7119
+
+GET {{MemberApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+@id=1
+DELETE {{MemberApi_HostAddress}}/api/members?id={{id}}
+
+###
+
+GET {{MemberApi_HostAddress}}/api/members
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGl2YW5zaHVAZ21haWwuY29tIiwiZXhwIjoxNzczNjQzMjE3LCJpc3MiOiJsb2NhbGhvc3QiLCJhdWQiOiJsb2NhbGhvc3QifQ.oYl5T0kfUU-gEHCucfwY8dSnLLGL7Zyzvp2ZqCFRtUE
+
+###
+
+POST {{MemberApi_HostAddress}}/api/members
+Content-Type: application/json
+
+{
+  //Member
+}
+
+###
+@id=
+PUT {{MemberApi_HostAddress}}/api/members?id={{id}}
+Content-Type: application/json
+
+{
+  //Member
+}
+
+###
+
+@id=2
+GET {{MemberApi_HostAddress}}/api/members/{{id}}
+
+###
+
+POST {{MemberApi_HostAddress}}/api/auth/login
+Content-Type: application/json
+
+{
+  "Email": "divanshu@gmail.com",
+  "Password": "12345678" 
+}
+
+###
